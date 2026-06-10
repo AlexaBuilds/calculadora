@@ -1,0 +1,193 @@
+/* ==========================================================================
+   TITULO: DISEÑO VISUAL DE LA CALCULADORA
+
+   CAMBIO RESPECTO AL PROYECTO SIMULACRO
+
+   Antes:
+   - El diseño estaba orientado a un sistema de tickets.
+   - Existían estilos para:
+       .ticket-item
+       .counter-box
+       #contadorTickets
+
+   Ahora:
+   - El diseño se adapta a una calculadora básica.
+   - Se elimina la lista dinámica de incidencias.
+   - Se elimina el contador de tickets.
+   - Se añade el elemento #resultado para mostrar
+     el cálculo realizado.
+
+   Se mantiene:
+   - La tarjeta principal.
+   - El fondo de la página.
+   - Los estilos de formularios.
+   - El diseño responsive.
+   - La paleta de colores.
+   ========================================================================== */
+
+
+/* ==========================================================================
+   1. RESETEO GENERAL Y CONFIGURACIÓN BASE
+   ========================================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+
+/* ==========================================================================
+   2. CONFIGURACIÓN DEL BODY
+
+   Se mantiene exactamente igual que en el simulacro
+   para centrar la tarjeta en la pantalla.
+   ========================================================================== */
+
+body {
+    background-color: #f0f4f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+
+/* ==========================================================================
+   3. TARJETA PRINCIPAL
+
+   Reutilizada del proyecto de tickets para conservar
+   el mismo diseño visual.
+   ========================================================================== */
+
+.card-container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 500px;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ==========================================================================
+   4. TÍTULO PRINCIPAL
+   ========================================================================== */
+
+.main-title {
+    color: #0c1d43;
+    font-size: 1.8rem;
+    font-weight: 700;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #eaedf2;
+    margin-bottom: 25px;
+}
+
+
+/* ==========================================================================
+   5. FORMULARIO DE ENTRADA DE DATOS
+
+   Antes:
+   - Equipo
+   - Problema
+
+   Ahora:
+   - Número 1
+   - Número 2
+   ========================================================================== */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #222222;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+
+/* ==========================================================================
+   6. BOTÓN CALCULAR
+
+   CAMBIO RESPECTO AL SIMULACRO:
+
+   Antes:
+   #btnAbrirTicket
+
+   Ahora:
+   #btnCalcular
+
+   Se mantiene la misma apariencia visual.
+   ========================================================================== */
+
+#btnCalcular {
+    background-color: #d62424;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+#btnCalcular:hover {
+    background-color: #b01b1b;
+}
+
+
+/* ==========================================================================
+   7. SECCIÓN DEL RESULTADO
+   ========================================================================== */
+
+.list-section h2 {
+    margin-bottom: 15px;
+}
+
+
+/* ==========================================================================
+   RESULTADO DE LA OPERACIÓN
+
+   CAMBIO RESPECTO AL SIMULACRO:
+
+   Antes:
+   .ticket-item representaba una incidencia.
+
+   Ahora:
+   #resultado muestra el resultado de la operación
+   matemática realizada por JavaScript.
+
+   Se reutiliza el mismo aspecto visual para mantener
+   coherencia con el diseño original.
+   ========================================================================== */
+
+#resultado {
+    background-color: #fff5f5;
+    border-left: 4px solid #d62424;
+    padding: 15px;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+
+/* ==========================================================================
+   ELEMENTOS ELIMINADOS DEL PROYECTO ORIGINAL
+
+   Ya no son necesarios:
+
+   .ticket-item
+   .counter-box
+   .counter-box h3
+   #contadorTickets
+
+   porque la calculadora no gestiona incidencias
+   ni mantiene un contador de tickets abiertos.
+   ========================================================================== */

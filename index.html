@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <!-- ==========================================================
+         TITULO: CALCULADORA WEB
+
+         CAMBIO RESPECTO AL PROYECTO SIMULACRO:
+
+         Antes:
+         - Sistema de Tickets de Soporte.
+         - Permitía registrar incidencias.
+         - Mostraba una lista de tickets.
+         - Llevaba un contador de incidencias abiertas.
+
+         Ahora:
+         - Aplicación Calculadora.
+         - Permite introducir dos números.
+         - Realiza una operación matemática.
+         - Muestra el resultado en pantalla.
+
+         Se mantiene:
+         - La estructura HTML.
+         - El diseño visual.
+         - La manipulación del DOM mediante JavaScript.
+         ========================================================== -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Antes: Soporte Técnico - Simulacro -->
+    <!-- Ahora: Calculadora - Simulacro -->
+    <title>Calculadora - Simulacro</title>
+
+    <!-- Hoja de estilos principal -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <!-- ==========================================================
+         CONTENEDOR PRINCIPAL
+
+         Se reutiliza la misma tarjeta visual utilizada
+         en el proyecto de gestión de tickets.
+         ========================================================== -->
+    <main class="card-container">
+
+        <!-- Título principal de la aplicación -->
+        <h1 class="main-title">Calculadora</h1>
+
+        <!-- ======================================================
+             SECCIÓN DE ENTRADA DE DATOS
+
+             CAMBIO RESPECTO AL SIMULACRO:
+
+             Antes:
+             - Input Equipo
+             - Input Problema
+
+             Ahora:
+             - Número 1
+             - Número 2
+
+             Ambos campos serán utilizados para realizar
+             una operación matemática.
+             ====================================================== -->
+        <section class="form-group">
+
+            <!-- Primer operando de la operación -->
+            <input
+                type="number"
+                id="numero1"
+                placeholder="Primer número">
+
+            <!-- Segundo operando de la operación -->
+            <input
+                type="number"
+                id="numero2"
+                placeholder="Segundo número">
+
+            <!--
+                 Antes:
+                 Botón "ABRIR TICKET"
+
+                 Ahora:
+                 Botón "CALCULAR"
+            -->
+            <button id="btnCalcular">
+                CALCULAR
+            </button>
+
+        </section>
+
+        <!-- ======================================================
+             SECCIÓN DE RESULTADOS
+
+             CAMBIO RESPECTO AL SIMULACRO:
+
+             Antes:
+             Existía una lista UL donde se añadían
+             tickets dinámicamente.
+
+             Ahora:
+             Mostramos el resultado de una operación
+             matemática realizada por JavaScript.
+             ====================================================== -->
+        <section class="list-section">
+
+            <h2>Resultado</h2>
+
+            <!--
+                 Este párrafo será actualizado
+                 dinámicamente mediante JavaScript
+                 para mostrar el resultado final.
+            -->
+            <p id="resultado">
+                Esperando operación...
+            </p>
+
+        </section>
+
+        <!-- ======================================================
+             ELEMENTO ELIMINADO
+
+             En el proyecto anterior existía:
+
+             Tickets Abiertos: 0
+
+             junto a un contador dinámico.
+
+             Como la calculadora no gestiona tickets,
+             esta sección ya no es necesaria y se ha
+             eliminado por completo.
+             ====================================================== -->
+
+    </main>
+
+    <!-- Archivo encargado de la lógica de la calculadora -->
+    <script src="script.js"></script>
+
+</body>
+</html>
